@@ -20,7 +20,7 @@
             <input type="email" name="email" id="email" > <br><br>
             <label for="senha">Senha:</label><br>
             <input type="password" name="senha" id="senha"><br> <br>
-            <span><a href="">Esqueci a senha</a></span><br><br>
+            <span><a href="">Esqueci a senha</a></span> | <span><a href="cad.php" id="cad">Criar conta</a></span><br><br>
             <input type="submit" value="Enviar" id="btn">
             <div>
                 <a href="code.php">Verificar o código enviado</a>

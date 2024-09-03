@@ -42,6 +42,7 @@
                 $executar = $conn->query($insert);
                 $_SESSION['nome'] = $nome;
                 echo "<script>alert('Cadastrado com sucesso!\nFaça o seu login!')</script>";
+                header("Location: login.php");
             }else {
                 echo "<script>
                         alert('Email Inválido!');
