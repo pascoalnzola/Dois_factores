@@ -12,6 +12,7 @@
     <title>Acesso</title>
 </head>
 <body>
-    <h1>Ola, Bem vindo ao sistema </h1>
+    <h1>Ola, Bem vindo ao sistema <?php echo $_SESSION['nome']?></h1>
+    <a href="sair.php">Terminar sessão</a>
 </body>
 </html>

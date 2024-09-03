@@ -8,7 +8,7 @@
             header("Location: index.php");
         }
         else{
-            header("Location: login.php");
+            echo "<script>alert('Código incorreto')</script>";
         }
     }
 ?>
@@ -21,13 +21,19 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
+    <script>
+        alert('Enviamos um código no su email\nSenão verifique os eu email e tente novamente!\nVerifique o código');
+    </script>
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post" id="login">
         <h1>Código Verificação</h1>
         <hr>
         <div>
             <label for="code">Code:</label><br>
-            <input type="password" name="code" id="code"><br> <br>
+            <input type="number" name="code" id="code"><br> <br>
             <input type="submit" value="Veriicar" id="btn">
+            <div>
+                <a href="login.php">Fazer o login novamente</a>
+            </div>
         </div>
     </form>
 </body>

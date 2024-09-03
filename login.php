@@ -22,13 +22,22 @@
             <input type="password" name="senha" id="senha"><br> <br>
             <span><a href="">Esqueci a senha</a></span><br><br>
             <input type="submit" value="Enviar" id="btn">
+            <div>
+                <a href="code.php">Verificar o código enviado</a>
+            </div>
         </div>
     </form>
-    <?php
-        if(isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) && !empty($_POST['senha'])){
-            include('logar.php');
-            header("Location: code.php");
-        }
-    ?>
+        <?php
+            if(isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) && !empty($_POST['senha'])){
+                include('logar.php');
+                header("Location: code.php");
+                echo 
+                "<script>
+                    alert('Enviamos um código de verificão clique em verificar para autenticar o código');
+                </script>";
+            }
+            
+        ?>
+        <br><br><br><br><br>
 </body>
 </html>
