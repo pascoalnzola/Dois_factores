@@ -12,7 +12,7 @@
     }
 </style>
 <body>
-    <form action="logar.php" method="post" id="login">
+    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post" id="login">
         <h1>Login</h1>
         <hr>
         <div>
@@ -24,5 +24,11 @@
             <input type="submit" value="Enviar" id="btn">
         </div>
     </form>
+    <?php
+        if(isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) && !empty($_POST['senha'])){
+            include('logar.php');
+            header("Location: code.php");
+        }
+    ?>
 </body>
 </html>
