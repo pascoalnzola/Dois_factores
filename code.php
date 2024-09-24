@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    include("Banco_dados/config.php");
     if(!(isset($_SESSION['code']))){
         header("Location: login.php");
     }

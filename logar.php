@@ -1,6 +1,5 @@
 <?php
     session_start();
-    include("Banco_dados/config.php");
     require_once('src/PHPMailer.php');
     require_once('src/SMTP.php');
     require_once('src/Exception.php');
@@ -12,9 +11,6 @@
 
     $email = $_POST['email'];
     $senha = $_POST['senha'];
-    $sel = "SELECT nome from usuario where email = '$email'";
-    $res = $conn->query($sel)->fetch(PDO::FETCH_ASSOC);
-    $_SESSION['nome'] = $res['nome'];
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         try{
             $mail->SMTPDebug = SMTP::DEBUG_SERVER;
